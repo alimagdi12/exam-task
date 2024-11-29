@@ -29,9 +29,9 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setError(null);
         try {
             console.log(quiz);
-            const response = await axios.post('http://localhost:5000/api/exam', quiz);
+            const response = await axios.post('https://blog2-uj54.onrender.com/api/exam', quiz);
             console.log(response);
-            
+
             setQuizzes((prev) => [...prev, response.data.data]);
             toast.success('Quiz Added Successfully...')
         } catch (error) {
@@ -45,7 +45,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.patch(`http://localhost:5000/api/exam/${id}`, updatedQuiz);
+            const response = await axios.patch(`https://blog2-uj54.onrender.com/api/exam/${id}`, updatedQuiz);
 
             setQuizzes((prev) =>
                 prev.map((quiz) => (quiz._id === id ? response.data.data : quiz))
@@ -62,7 +62,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setLoading(true);
         setError(null);
         try {
-            await axios.delete(`http://localhost:5000/api/exam/${id}`);
+            await axios.delete(`https://blog2-uj54.onrender.com/api/exam/${id}`);
             setQuizzes((prev) => prev.filter((quiz) => quiz._id !== id));
             toast.error('Announcement deleted successfully...')
         } catch (error) {

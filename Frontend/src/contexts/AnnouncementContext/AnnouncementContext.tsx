@@ -37,7 +37,7 @@ export const AnnouncementProvider: React.FC<{ children: React.ReactNode }> = ({
     setError(null);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/announcement",
+        "https://blog2-uj54.onrender.com/api/announcement",
         announcement
       );
       setAnnouncements((prev) => [...prev, response.data.data]);
@@ -57,7 +57,7 @@ export const AnnouncementProvider: React.FC<{ children: React.ReactNode }> = ({
     setError(null);
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/announcement/${id}`,
+        `https://blog2-uj54.onrender.com/api/announcement/${id}`,
         updatedAnnouncement
       );
       setAnnouncements((prev) =>
@@ -77,7 +77,7 @@ export const AnnouncementProvider: React.FC<{ children: React.ReactNode }> = ({
     setLoading(true);
     setError(null);
     try {
-      await axios.delete(`http://localhost:5000/api/announcement/${id}`);
+      await axios.delete(`https://blog2-uj54.onrender.com/api/announcement/${id}`);
       setAnnouncements((prev) =>
         prev.filter((announcement) => announcement._id !== id)
       );
@@ -93,7 +93,7 @@ export const AnnouncementProvider: React.FC<{ children: React.ReactNode }> = ({
     setLoading(true);
     setError(null);
     try {
-      await axios.delete("http://localhost:5000/api/announcement");
+      await axios.delete("https://blog2-uj54.onrender.com/api/announcement");
       setAnnouncements([]);
     } catch (error) {
       setError("Error deleting all announcements.");
