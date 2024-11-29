@@ -16,10 +16,10 @@ dotenv.config({
 
 const io = socket(server, {
     cors: {
-      origin: "*",
-      methods: ["GET", "POST", "PUT", "DELETE"],
+        origin: "*",
+        methods: ["GET", "POST", "PUT", "DELETE"],
     },
-  });
+});
 // const PORT1 = process.env.PORT
 
 // Exam controller and repo classes

@@ -20,7 +20,7 @@ export const AnnouncementProvider: React.FC<{ children: React.ReactNode }> = ({
     setError(null);
     try {
       const response = await axios.get(
-        "http://127.0.0.1:5000/api/announcement"
+        "https://blog2-uj54.onrender.com/api/announcement"
       );
       setAnnouncements(response.data.data);
     } catch (error) {

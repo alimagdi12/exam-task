@@ -15,7 +15,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get('http://localhost:5000/api/exams');
+            const response = await axios.get('https://blog2-uj54.onrender.com/api/exams');
             setQuizzes(response.data.data);
         } catch (error) {
             setError("Error fetching quizzes.");
