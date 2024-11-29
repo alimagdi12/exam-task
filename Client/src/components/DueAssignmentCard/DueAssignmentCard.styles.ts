@@ -1,0 +1,71 @@
+export const styles = {
+    model: {
+      position: 'absolute' as const,
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: { xs: '80%', sm: '450px' },
+      bgcolor: '#fff',
+      borderRadius: '10px',
+      padding: '32px',
+      boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.1)',
+      color: '#333',
+      animation: 'fadeIn 0.3s ease-out',
+    },
+    input: {
+      marginBottom: '20px',
+      backgroundColor: '#F4F4F4',
+      borderRadius: '6px',
+      padding: '10px',
+      fontSize: '1rem',
+      border: '1px solid #ddd',
+    },
+    button: {
+      backgroundColor: '#007BFF',
+      color: '#fff',
+      textTransform: 'none',
+      padding: '12px 20px',
+      fontWeight: '600',
+      borderRadius: '6px',
+      boxShadow: 'none',
+      '&:hover': {
+        backgroundColor: '#0056b3',
+        transform: 'scale(1.05)',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+      },
+    },
+    deleteButton: {
+        backgroundColor: '#ff0000',
+      color: '#fff',
+      textTransform: 'none',
+      padding: '12px 20px',
+      fontWeight: '600',
+      borderRadius: '6px',
+      boxShadow: 'none',
+    }
+    ,
+    card: {
+      margin: '15px 10px',
+      padding: '25px',
+      borderRadius: '15px',
+      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+      background: 'linear-gradient(145deg, #f3f3f3, #e3e3e3)',
+      transition: 'transform 0.3s ease, box-shadow 0.2s ease',
+      '&:hover': {
+        transform: 'translateY(-10px)',
+        boxShadow: '0 15px 40px rgba(0, 0, 0, 0.2)',
+      },
+    },
+    flexContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '16px',
+      marginBottom: '16px',
+    },
+    quizCards: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+      gap: '20px',
+    },
+  };
+  

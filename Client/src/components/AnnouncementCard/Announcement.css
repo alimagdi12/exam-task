@@ -1,0 +1,112 @@
+.quiz-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.quiz-card {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Button Styles */
+.button {
+    background: linear-gradient(to left, #e8a5e6, #b34f87); /* Soft pink gradient */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.6s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.button:hover {
+    background: linear-gradient(to right, #e8a5e6, #b34f87); /* Slightly different gradient on hover */
+    transform: translateY(-4px); /* Small upward movement */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.button:active {
+    transform: translateY(2px); /* Downward movement when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow on click */
+}
+
+/* Modal Styling */
+.model {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for modals */
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    animation: fadeIn 0.3s ease-out; /* Modal fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Avatar Styling */
+.avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1); /* Slight hover effect on avatar */
+}
+
+/* Card Styling */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px); /* Slight hover effect for cards */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* TextField Styling */
+input[type="file"] {
+    display: none;
+}
+
+input[type="file"] + label {
+    background-color: #b34f87;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover + label {
+    background-color: #9c3f6b; /* Darker shade on hover */
+}
+
+/* Image Preview */
+img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
