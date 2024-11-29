@@ -7,9 +7,12 @@
     "skipLibCheck": true,
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "./dist",
-    "noEmit": false,
+    "outDir": "./dist",  
+    "noEmit": false       
   },
-  "include": ["src/**/*", "__mocks__/**/*", "__testing__"],
+  "include": [
+    "src/**/*",
+    "__mocks__/**/*"
+],
   "references": []
 }
